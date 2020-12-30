@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.i61.pjx.fission.service.mapper.pjx.FissionEndOfActivityDatumMapper">
+  <resultMap id="BaseResultMap" type="com.i61.pjx.fission.service.model.pjx.FissionEndOfActivityDatum">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="redis_key" jdbcType="VARCHAR" property="redisKey" />
+    <result column="redis_type" jdbcType="VARCHAR" property="redisType" />
+    <result column="biz_type" jdbcType="VARCHAR" property="bizType" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_update" jdbcType="TIMESTAMP" property="gmtUpdate" />
+    <result column="redis_value" jdbcType="LONGVARCHAR" property="redisValue" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from fission_end_of_activity_datum
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.i61.pjx.fission.service.model.pjx.FissionEndOfActivityDatum">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into fission_end_of_activity_datum (redis_key, redis_type, biz_type, redis_value
+      )
+    values (#{redisKey,jdbcType=VARCHAR}, #{redisType,jdbcType=VARCHAR}, #{bizType,jdbcType=VARCHAR}, #{redisValue,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.i61.pjx.fission.service.model.pjx.FissionEndOfActivityDatum">
+    update fission_end_of_activity_datum
+    set redis_key = #{redisKey,jdbcType=VARCHAR},
+      redis_type = #{redisType,jdbcType=VARCHAR},
+      biz_type = #{bizType,jdbcType=VARCHAR},
+      redis_value = #{redisValue,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, redis_key, redis_type, biz_type, gmt_create, gmt_update, redis_value
+    from fission_end_of_activity_datum
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, redis_key, redis_type, biz_type, gmt_create, gmt_update, redis_value
+    from fission_end_of_activity_datum
+  </select>
+</mapper>
