@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5ce915ee-7742-41c0-9f20-5121a83ea29e" name="Default Changelist" comment="代码提交">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/bean/BaseResultCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/bean/RespResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/login/TokenUserHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/login/annotation/LoginRequired.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/login/config/JwtAuthConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/login/entity/JwtPayload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/login/interceptor/JwtUserAuthInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/login/utils/ResponseHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/login/utils/SecretUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/login/utils/UserUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/swagger/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/converter/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/converter/user/UserVoConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/handler/ExceptionHandlerInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/vo/req/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/vo/req/user/LoginReqVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/vo/req/user/RegisterReqVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/vo/resp/Dermo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/vo/resp/user/LoginRespVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/vo/resp/user/RegisterRespVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/main/resources/application-mysql.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/test/java/com/dream/tea/provider/CodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/test/java/com/dream/tea/provider/service/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/test/java/com/dream/tea/provider/service/user/UserUserLoginServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/test/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/test/resources/code_generator.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/TeaApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/bean/BaseResultCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/bean/RespResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/login/TokenUserHelper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/login/annotation/LoginRequired.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/login/config/JwtAuthConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/login/entity/JwtPayload.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/login/interceptor/JwtUserAuthInterceptor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/login/utils/ResponseHelper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/login/utils/UserUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/target/test-classes/application-mysql.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/target/test-classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/target/test-classes/code_generator.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/target/test-classes/com/dream/tea/provider/CodeGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/cache/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/cache/user/CacheLoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/cache/user/impl/RedisCacheLoginServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/bean/BaseCommonException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/bean/ResultCodeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/config/ProfileConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/db/slave/annotation/DBSlave.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/db/source/UserDataSourceConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/dto/req/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/dto/resp/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/enums/SexEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/service/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/service/user/UserLoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/service/user/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/service/user/impl/UserLoginServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/service/user/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/utils/RsaUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/resources/mapper/user/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/provider.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/TeaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/TeaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/resources/application-mysql.yml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/test/resources/application-mysql.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/config/Demo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/config/db/DataSourceConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/config/db/DataSourceContentHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/db/slave/DataSourceContentHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/config/db/DynamicDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/db/slave/DynamicDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/config/db/DynamicDataSourceAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/db/slave/DynamicDataSourceAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/mapper/user/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/resources/mapper/config/FissionEndOfActivityDatumMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tea.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:\workspace\IDEA\IntelliJ IDEA 2020.2.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1mNi7RjlWRCGBA1Bl95rx4oJ6Zf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/provider/src/test" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\gdut\tea\provider\src\test" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TeaApplication">
+    <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dream.tea.provider.CodeGenerator" />
+      <module name="provider" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dream.tea.provider.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserUserLoginServiceTest.getUserByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="provider" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dream.tea.provider.service.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dream.tea.provider.service.user" />
+      <option name="MAIN_CLASS_NAME" value="com.dream.tea.provider.service.user.UserUserLoginServiceTest" />
+      <option name="METHOD_NAME" value="getUserByIdTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserUserLoginServiceTest.registerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="provider" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dream.tea.provider.service.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.dream.tea.provider.service.user" />
+      <option name="MAIN_CLASS_NAME" value="com.dream.tea.provider.service.user.UserUserLoginServiceTest" />
+      <option name="METHOD_NAME" value="registerTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TeaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="provider" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dream.tea.provider.TeaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserUserLoginServiceTest.registerTest" />
+        <item itemvalue="JUnit.UserUserLoginServiceTest.getUserByIdTest" />
+        <item itemvalue="Application.CodeGenerator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ce915ee-7742-41c0-9f20-5121a83ea29e" name="Default Changelist" comment="" />
+      <created>1609340284001</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609340284001</updated>
+      <workItem from="1609340285515" duration="4253000" />
+      <workItem from="1609495196102" duration="2004000" />
+      <workItem from="1609561817895" duration="33347000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="代码提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="代码提交" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="309" y="42" key="#Inspections" timestamp="1609564193087">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="309" y="42" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1609564193087" />
+    <state x="435" y="164" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1609566887551">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="435" y="164" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1609566887550" />
+    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1609586684984">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1609586684984" />
+    <state x="313" y="286" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1609570558577">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="313" y="286" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1609570558577" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1609590369528">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1609590369528" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609567111239">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1609567111239" />
+    <state x="438" y="65" key="#xdebugger.evaluate" timestamp="1609594897895">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="438" y="65" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1609594897895" />
+    <state x="245" y="0" key="CommitChangelistDialog2" timestamp="1609566823334">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="245" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1609566823334" />
+    <state width="1323" height="261" key="GridCell.Tab.0.bottom" timestamp="1609595191026">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="261" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609595191026" />
+    <state width="1323" height="261" key="GridCell.Tab.0.center" timestamp="1609595191026">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="261" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1609595191026" />
+    <state width="1323" height="261" key="GridCell.Tab.0.left" timestamp="1609595191025">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="261" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1609595191025" />
+    <state width="1323" height="261" key="GridCell.Tab.0.right" timestamp="1609595191026">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="261" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1609595191026" />
+    <state width="1323" height="261" key="GridCell.Tab.1.bottom" timestamp="1609595207199">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="261" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609595207199" />
+    <state width="1323" height="261" key="GridCell.Tab.1.center" timestamp="1609595207198">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="261" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1609595207198" />
+    <state width="1323" height="261" key="GridCell.Tab.1.left" timestamp="1609595207198">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="261" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1609595207198" />
+    <state width="1323" height="261" key="GridCell.Tab.1.right" timestamp="1609595207198">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="261" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1609595207198" />
+    <state width="1323" height="261" key="GridCell.Tab.2.bottom" timestamp="1609595190653">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="261" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609595190653" />
+    <state width="1323" height="261" key="GridCell.Tab.2.center" timestamp="1609595190653">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="261" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1609595190653" />
+    <state width="1323" height="261" key="GridCell.Tab.2.left" timestamp="1609595190653">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="261" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1609595190653" />
+    <state width="1323" height="261" key="GridCell.Tab.2.right" timestamp="1609595190653">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="261" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1609595190653" />
+    <state x="263" y="98" key="IDE.errors.dialog" timestamp="1609590840110">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="263" y="98" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1609590840110" />
+    <state x="492" y="65" key="RollbackChangesDialog" timestamp="1609566853526">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="492" y="65" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1609566853526" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1609584584598">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1609584584598" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1609568997350">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1609568997350" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1609564766850">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1609564766850" />
+    <state x="131" y="86" width="1104" height="642" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1609585301029">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="131" y="86" width="1104" height="642" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1609585301029" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1609585962812">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1609585962812" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="com.dream.tea.service.common.bean.BaseCommonException" package="com.dream.tea.service.common.bean" />
+          <option name="timeStamp" value="14" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/handler/ExceptionHandlerInterceptor.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

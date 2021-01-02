@@ -1,0 +1,7 @@
+-table user
+-modelName User
+-overwrite -jdbcUrl jdbc:mysql://localhost:3306/tea-user?useUnicode=true&characterEncoding=utf-8&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useSSL=false
+-jdbcUsername root
+-jdbcPassword yaya
+-author liyongfa
+-database user

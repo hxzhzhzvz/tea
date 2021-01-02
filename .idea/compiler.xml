@@ -2,10 +2,16 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Maven default annotation processors profile" enabled="true">
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Annotation profile for tea" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.m2/repository/org/mapstruct/mapstruct-processor/1.4.1.Final/mapstruct-processor-1.4.1.Final.jar" />
+          <entry name="$USER_HOME$/.m2/repository/org/mapstruct/mapstruct/1.4.1.Final/mapstruct-1.4.1.Final.jar" />
+          <entry name="$USER_HOME$/.m2/repository/org/projectlombok/lombok/1.18.12/lombok-1.18.12.jar" />
+        </processorPath>
         <module name="provider" />
         <module name="service" />
       </profile>
