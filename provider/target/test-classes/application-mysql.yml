@@ -1,20 +1,10 @@
-spring:
-  datasource:
-    tea-user:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/tea-user?useUnicode=true&characterEncoding=utf-8&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useSSL=false
-      username: root
-      password: yaya
-    tea-config:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/tea-config?useUnicode=true&characterEncoding=utf-8&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useSSL=false
-      username: root
-      password: yaya
-    tea-course:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/tea-course?useUnicode=true&characterEncoding=utf-8&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useSSL=false
-      username: root
-      password: yaya
-
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
+# 使用yml格式一直导致配置信息读取不到
+spring.datasource.tea-user.driverClassName=com.mysql.cj.jdbc.Driver
+spring.datasource.tea-user.jdbcUrl=jdbc:mysql://localhost:3306/tea-user?useUnicode=true&characterEncoding=utf-8&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useSSL=false
+spring.datasource.tea-user.username=root
+spring.datasource.tea-user.password=yaya
+  # 使用yml格式一直导致配置信息读取不到
+spring.datasource.tea-library.driverClassName=com.mysql.cj.jdbc.Driver
+spring.datasource.tea-library.jdbcUrl=jdbc:mysql://localhost:3306/tea-library?useUnicode=true&characterEncoding=utf-8&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useSSL=false
+spring.datasource.tea-library.username=root
+spring.datasource.tea-library.password=yaya

@@ -22,7 +22,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ce915ee-7742-41c0-9f20-5121a83ea29e" name="Default Changelist" comment="" />
+    <list default="true" id="5ce915ee-7742-41c0-9f20-5121a83ea29e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/db/source/LibraryDataSourceConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/TeaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/TeaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/resources/application-mysql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/resources/application-mysql.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/test/java/com/dream/tea/provider/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/test/java/com/dream/tea/provider/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/test/resources/application-mysql.yml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/test/resources/application-mysql.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/test/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/test/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/test/resources/code_generator.txt" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/test/resources/code_generator.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/target/classes/application-mysql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/classes/application-mysql.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/target/test-classes/application-mysql.yml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/test-classes/application-mysql.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/target/test-classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/test-classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/target/test-classes/code_generator.txt" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/test-classes/code_generator.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/target/test-classes/com/dream/tea/provider/CodeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/test-classes/com/dream/tea/provider/CodeGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/db/source/UserDataSourceConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/db/source/UserDataSourceConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/mapper/user/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/mapper/user/UserMapper.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +50,7 @@
         <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="package-info" />
       </list>
     </option>
   </component>
@@ -76,7 +93,7 @@
       <recent name="E:\gdut\tea\provider\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.TeaApplication">
+  <component name="RunManager" selected="Application.CodeGenerator">
     <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.dream.tea.provider.CodeGenerator" />
       <module name="provider" />
@@ -144,9 +161,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CodeGenerator" />
         <item itemvalue="JUnit.UserUserLoginServiceTest.registerTest" />
         <item itemvalue="JUnit.UserUserLoginServiceTest.getUserByIdTest" />
-        <item itemvalue="Application.CodeGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -160,7 +177,7 @@
       <updated>1609340284001</updated>
       <workItem from="1609340285515" duration="4253000" />
       <workItem from="1609495196102" duration="2004000" />
-      <workItem from="1609561817895" duration="33704000" />
+      <workItem from="1609561817895" duration="35099000" />
     </task>
     <task id="LOCAL-00001" summary="项目结构搭建成功">
       <created>1609595600556</created>
@@ -169,7 +186,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609595600556</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="项目结构搭建成功">
+      <created>1609595648114</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609595648114</updated>
+    </task>
+    <task id="LOCAL-00003" summary="项目结构搭建成功">
+      <created>1609595664890</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609595664891</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,42 +251,42 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="438" y="65" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1609594897895" />
-    <state x="245" y="0" key="CommitChangelistDialog2" timestamp="1609595596851">
+    <state x="245" y="0" key="CommitChangelistDialog2" timestamp="1609595662939">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="245" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1609595596851" />
-    <state width="1323" height="246" key="GridCell.Tab.0.bottom" timestamp="1609595544961">
+    <state x="245" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1609595662939" />
+    <state width="1323" height="327" key="GridCell.Tab.0.bottom" timestamp="1609597876003">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="246" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609595544961" />
-    <state width="1323" height="246" key="GridCell.Tab.0.center" timestamp="1609595544961">
+    <state width="1323" height="327" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609597876003" />
+    <state width="1323" height="327" key="GridCell.Tab.0.center" timestamp="1609597876002">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="246" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1609595544961" />
-    <state width="1323" height="246" key="GridCell.Tab.0.left" timestamp="1609595544960">
+    <state width="1323" height="327" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1609597876002" />
+    <state width="1323" height="327" key="GridCell.Tab.0.left" timestamp="1609597876002">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="246" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1609595544960" />
-    <state width="1323" height="246" key="GridCell.Tab.0.right" timestamp="1609595544961">
+    <state width="1323" height="327" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1609597876002" />
+    <state width="1323" height="327" key="GridCell.Tab.0.right" timestamp="1609597876003">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="246" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1609595544961" />
-    <state width="1323" height="246" key="GridCell.Tab.1.bottom" timestamp="1609595544961">
+    <state width="1323" height="327" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1609597876003" />
+    <state width="1323" height="254" key="GridCell.Tab.1.bottom" timestamp="1609597460012">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="246" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609595544961" />
-    <state width="1323" height="246" key="GridCell.Tab.1.center" timestamp="1609595544961">
+    <state width="1323" height="254" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609597460012" />
+    <state width="1323" height="254" key="GridCell.Tab.1.center" timestamp="1609597460012">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="246" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1609595544961" />
-    <state width="1323" height="246" key="GridCell.Tab.1.left" timestamp="1609595544961">
+    <state width="1323" height="254" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1609597460012" />
+    <state width="1323" height="254" key="GridCell.Tab.1.left" timestamp="1609597460012">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="246" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1609595544961" />
-    <state width="1323" height="246" key="GridCell.Tab.1.right" timestamp="1609595544961">
+    <state width="1323" height="254" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1609597460012" />
+    <state width="1323" height="254" key="GridCell.Tab.1.right" timestamp="1609597460012">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="246" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1609595544961" />
+    <state width="1323" height="254" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1609597460012" />
     <state width="1323" height="246" key="GridCell.Tab.2.bottom" timestamp="1609595544961">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -272,10 +303,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="246" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1609595544961" />
-    <state x="263" y="98" key="IDE.errors.dialog" timestamp="1609590840110">
+    <state x="263" y="98" key="IDE.errors.dialog" timestamp="1609595684806">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="263" y="98" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1609590840110" />
+    <state x="263" y="98" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1609595684806" />
     <state x="492" y="65" key="RollbackChangesDialog" timestamp="1609566853526">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -288,10 +319,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1609568997350" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1609595602797">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1609595667163">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1609595602797" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1609595667163" />
     <state x="131" y="86" width="1104" height="642" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1609585301029">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

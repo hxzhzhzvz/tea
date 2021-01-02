@@ -4,9 +4,12 @@ spring:
   application:
     name: tea
   redis:
-    host: 172.16.253.106
+    host: 121.5.62.86
     port: 6379
-    password: redis123
+    password: yaya
     client-type: lettuce
   profiles:
     include: mysql
+logging:
+  level:
+    com: info

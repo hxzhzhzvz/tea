@@ -33,7 +33,7 @@ class CodeGenerator {
     private static final String RESOURCES_PATH = "/src/main/resources";
 
     // JDBC默认配置，请修改为你项目的实际配置
-    private static String JDBC_URL = "jdbc:mysql://localhost:3306/tea-user?useUnicode=true&characterEncoding=utf-8&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useSSL=false";
+    private static String JDBC_URL = "jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useSSL=false";
     private static String JDBC_USERNAME = "root";
     private static String JDBC_PASSWORD = "yaya";
     private static String JDBC_DIVER_CLASS_NAME = "com.mysql.jdbc.Driver";

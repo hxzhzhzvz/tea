@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dream.tea.service.mapper.library.VideoMapper">
+  <resultMap id="BaseResultMap" type="com.dream.tea.service.model.library.Video">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="record_id" jdbcType="BIGINT" property="recordId" />
+    <result column="video_url" jdbcType="VARCHAR" property="videoUrl" />
+    <result column="video_cover_url" jdbcType="VARCHAR" property="videoCoverUrl" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from video
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.dream.tea.service.model.library.Video">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into video (record_id, video_url, video_cover_url
+      )
+    values (#{recordId,jdbcType=BIGINT}, #{videoUrl,jdbcType=VARCHAR}, #{videoCoverUrl,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.dream.tea.service.model.library.Video">
+    update video
+    set record_id = #{recordId,jdbcType=BIGINT},
+      video_url = #{videoUrl,jdbcType=VARCHAR},
+      video_cover_url = #{videoCoverUrl,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, record_id, video_url, video_cover_url
+    from video
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, record_id, video_url, video_cover_url
+    from video
+  </select>
+</mapper>

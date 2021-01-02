@@ -20,32 +20,33 @@ import javax.sql.DataSource;
  */
 @Slf4j
 @Configuration
-@MapperScan(basePackages = "com.dream.tea.service.mapper.user", sqlSessionTemplateRef = "userSqlSessionTemplate")
-public class UserDataSourceConfiguration {
+@MapperScan(basePackages = "com.dream.tea.service.mapper.library", sqlSessionTemplateRef = "librarySqlSessionTemplate")
+public class LibraryDataSourceConfiguration {
 
-    @Bean("user")
-    @ConfigurationProperties(prefix = "spring.datasource.tea-user")
-    public DataSource initTeaUserDataSource() {
+
+    @Bean("library")
+    @ConfigurationProperties(prefix = "spring.datasource.tea-library")
+    public DataSource initTeaLibraryDataSource() {
         return DataSourceBuilder.create().build();
     }
 
-    @Bean(name = "userSqlSessionFactory")
-    public SqlSessionFactory userSqlSessionFactory(@Qualifier("user") DataSource datasource)
+    @Bean(name = "librarySqlSessionFactory")
+    public SqlSessionFactory librarySqlSessionFactory(@Qualifier("library") DataSource datasource)
             throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(datasource);
         bean.setMapperLocations(
-                new PathMatchingResourcePatternResolver().getResources("classpath*:mapper/user/*.xml"));
+                new PathMatchingResourcePatternResolver().getResources("classpath*:mapper/library/*.xml"));
         return bean.getObject();
     }
 
-    @Bean(name = "userTransactionManager")
-    public DataSourceTransactionManager userTransactionManager(@Qualifier("user") DataSource dataSource) {
+    @Bean(name = "libraryTransactionManager")
+    public DataSourceTransactionManager libraryTransactionManager(@Qualifier("library") DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
     }
 
-    @Bean(name = "userSqlSessionTemplate")
-    public SqlSessionTemplate userSqlSessionTemplate(@Qualifier("userSqlSessionFactory") SqlSessionFactory sqlSessionFactory) throws Exception {
+    @Bean(name = "librarySqlSessionTemplate")
+    public SqlSessionTemplate librarySqlSessionTemplate(@Qualifier("librarySqlSessionFactory") SqlSessionFactory sqlSessionFactory) throws Exception {
         return new SqlSessionTemplate(sqlSessionFactory);
     }
 }

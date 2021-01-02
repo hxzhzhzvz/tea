@@ -1,13 +1,13 @@
 package com.dream.tea.service.mapper.user;
 
 import com.dream.tea.service.model.user.User;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 /**
  * @author yongfa
  */
-@Mapper
+@Repository
 public interface UserMapper {
 
     /**
