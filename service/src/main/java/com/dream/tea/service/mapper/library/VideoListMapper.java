@@ -1,7 +1,7 @@
 package com.dream.tea.service.mapper.library;
 
 import com.dream.tea.service.model.library.VideoList;
-import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -11,13 +11,14 @@ import java.util.List;
  */
 @Repository
 public interface VideoListMapper {
-    int deleteByPrimaryKey(Long id);
 
-    int insert(VideoList record);
+    /**
+     * 查询视频播放列表
+     *
+     * @param idList 列表id
+     * @param status 当前状态，0表示禁用，1表示上架
+     * @return
+     */
+    List<VideoList> getByIdListAndStatus(@Param("idList") List<Long> idList, @Param("status") Integer status);
 
-    VideoList selectByPrimaryKey(Long id);
-
-    List<VideoList> selectAll();
-
-    int updateByPrimaryKey(VideoList record);
 }

@@ -54,10 +54,10 @@ public class UserLoginServiceImpl implements UserLoginService {
             throw new BaseCommonException(ResultCodeEnum.ACCOUNT_IS_EXISTS);
         }
         if (StringUtils.isBlank(user.getNickName())) {
-            user.setNickName(profileConfig.getDefaultNickName());
+            user.setNickName("");
         }
         if (StringUtils.isBlank(user.getHearUrl())) {
-            user.setHearUrl(profileConfig.getDefaultHeadUrl());
+            user.setHearUrl("");
         }
         return userMapper.insert(user);
     }

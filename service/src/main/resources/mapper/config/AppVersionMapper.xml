@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dream.tea.service.mapper.config.AppVersionMapper">
+  <resultMap id="BaseResultMap" type="com.dream.tea.service.model.config.AppVersion">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="version" jdbcType="VARCHAR" property="version" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_update" jdbcType="TIMESTAMP" property="gmtUpdate" />
+  </resultMap>
+
+  <select id="getLatestOne" resultMap="BaseResultMap">
+    select id, title, content, version, url, gmt_create, gmt_update
+    from app_version
+    order by id desc
+    limit 1
+  </select>
+</mapper>

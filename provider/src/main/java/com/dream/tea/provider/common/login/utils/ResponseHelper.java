@@ -14,8 +14,8 @@ public abstract class ResponseHelper {
     /**
      * 返回文本数据
      *
-     * @param response
-     * @param text
+     * @param response 返回的response对象
+     * @param text     返回的文案内容
      */
     public static void renderText(HttpServletResponse response, String text) {
         render(response, "text/plain;charset=UTF-8", text);
@@ -24,29 +24,19 @@ public abstract class ResponseHelper {
     /**
      * 返回json数据
      *
-     * @param response
-     * @param text
+     * @param response 返回的response对象
+     * @param text     返回的文案内容
      */
     public static void renderJson(HttpServletResponse response, String text) {
         render(response, "application/json;charset=UTF-8", text);
     }
 
     /**
-     * 返回xml数据
-     *
-     * @param response
-     * @param text
-     */
-    public static void renderXml(HttpServletResponse response, String text) {
-        render(response, "text/xml;charset=UTF-8", text);
-    }
-
-    /**
      * 具体实现
      *
-     * @param response
-     * @param contentType
-     * @param text
+     * @param response    返回的response对象
+     * @param contentType 返回的contentType数据类型
+     * @param text        返回的文案内容
      */
     public static void render(HttpServletResponse response, String contentType, String text) {
         response.setContentType(contentType);

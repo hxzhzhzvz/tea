@@ -9,35 +9,14 @@
     <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
     <result column="gmt_update" jdbcType="TIMESTAMP" property="gmtUpdate" />
   </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
-    delete from video_list
-    where id = #{id,jdbcType=BIGINT}
-  </delete>
-  <insert id="insert" parameterType="com.dream.tea.service.model.library.VideoList">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into video_list (name, cover_url, status, 
-      gmt_create, gmt_update)
-    values (#{name,jdbcType=VARCHAR}, #{coverUrl,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, 
-      #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtUpdate,jdbcType=TIMESTAMP})
-  </insert>
-  <update id="updateByPrimaryKey" parameterType="com.dream.tea.service.model.library.VideoList">
-    update video_list
-    set name = #{name,jdbcType=VARCHAR},
-      cover_url = #{coverUrl,jdbcType=VARCHAR},
-      status = #{status,jdbcType=TINYINT},
-      gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
-      gmt_update = #{gmtUpdate,jdbcType=TIMESTAMP}
-    where id = #{id,jdbcType=BIGINT}
-  </update>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
-    select id, name, cover_url, status, gmt_create, gmt_update
+
+  <select id="getByIdListAndStatus" resultMap="BaseResultMap">
+    select id, name, cover_url, `status`, gmt_create, gmt_update
     from video_list
-    where id = #{id,jdbcType=BIGINT}
-  </select>
-  <select id="selectAll" resultMap="BaseResultMap">
-    select id, name, cover_url, status, gmt_create, gmt_update
-    from video_list
+    where id in
+    <foreach collection="idList" open="(" separator="," close=")" item="videoListId">
+      #{videoListId, jdbcType=BIGINT}
+    </foreach>
+    and `status` = #{status, jdbcType=TINYINT}
   </select>
 </mapper>

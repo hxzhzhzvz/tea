@@ -1,0 +1,52 @@
+package com.dream.tea.service.cache.app.impl;
+
+import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.util.ObjectUtil;
+import com.dream.tea.service.cache.app.CacheUserFeedbackService;
+import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
+/**
+ * @author yongfa
+ */
+@Service
+public class RedisCacheUserFeedbackServiceImpl implements CacheUserFeedbackService {
+
+    /**
+     * key的业务前缀
+     */
+    private static final String KEY_PREFIX = "feedback:";
+
+    /**
+     * 同一个用户每天最多能够提交的反馈意见数量
+     */
+    private static final int THRESHOLD = 20;
+
+    @Resource
+    private StringRedisTemplate stringRedisTemplate;
+
+    @Override
+    public boolean canSubmitFeedback(Long userId) {
+        String key = KEY_PREFIX + userId;
+        Boolean hasKey = stringRedisTemplate.hasKey(key);
+        if (ObjectUtil.isNotNull(hasKey) && hasKey) {
+            Long incrRes = stringRedisTemplate.opsForValue().increment(key);
+            return ObjectUtil.isNull(incrRes) || (incrRes <= THRESHOLD);
+        } else {
+            long expireTime = DateUtil.endOfDay(new Date()).getTime() - System.currentTimeMillis();
+            stringRedisTemplate.opsForValue().increment(key);
+            Boolean expireRes = stringRedisTemplate.expire(key, expireTime, TimeUnit.MILLISECONDS);
+            // 防止设置过期时间失败，导致一直无法进行key的更新
+            if (ObjectUtil.isNull(expireRes) || !expireRes) {
+                stringRedisTemplate.delete(key);
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }
+}

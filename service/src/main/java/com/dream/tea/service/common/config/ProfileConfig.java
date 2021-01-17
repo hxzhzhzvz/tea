@@ -23,13 +23,4 @@ public class ProfileConfig {
      */
     private Integer loginCollectLimitRange = 10;
 
-    /**
-     * 注册时的默认用户昵称
-     */
-    private String defaultNickName = "小宝宝";
-
-    /**
-     * 默认的头像
-     */
-    private String defaultHeadUrl = "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1051452078,2851059078&fm=26&gp=0.jpg";
 }

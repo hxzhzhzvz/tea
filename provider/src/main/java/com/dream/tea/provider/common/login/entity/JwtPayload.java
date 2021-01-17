@@ -13,9 +13,4 @@ public class JwtPayload {
      */
     private Long userId;
 
-    /**
-     * 用户的注册手机号
-     */
-    private String phone;
-
 }

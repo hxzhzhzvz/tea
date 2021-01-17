@@ -1,43 +1,46 @@
 package com.dream.tea.service.model.library;
 
+import lombok.Data;
+
+import java.util.Date;
+
+/**
+ * @author yongfa
+ */
+@Data
 public class Video {
+    /**
+     * 自增id
+     */
     private Long id;
 
-    private Long recordId;
+    /**
+     * 该视频所属的视频列表的id
+     */
+    private Long videoListId;
 
+    /**
+     * 视频的名字
+     */
+    private String name;
+
+    /**
+     * 视频的封面
+     */
+    private String coverUrl;
+
+    /**
+     * 视频链接
+     */
     private String videoUrl;
 
-    private String videoCoverUrl;
+    /**
+     * 创建时间
+     */
+    private Date gmtCreate;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getRecordId() {
-        return recordId;
-    }
-
-    public void setRecordId(Long recordId) {
-        this.recordId = recordId;
-    }
-
-    public String getVideoUrl() {
-        return videoUrl;
-    }
-
-    public void setVideoUrl(String videoUrl) {
-        this.videoUrl = videoUrl;
-    }
-
-    public String getVideoCoverUrl() {
-        return videoCoverUrl;
-    }
-
-    public void setVideoCoverUrl(String videoCoverUrl) {
-        this.videoCoverUrl = videoCoverUrl;
-    }
+    /**
+     * 最近的更新时间
+     */
+    private Date gmtUpdate;
 }

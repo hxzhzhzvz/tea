@@ -12,6 +12,7 @@ import com.dream.tea.provider.vo.resp.user.RegisterRespVo;
 import com.dream.tea.service.common.bean.BaseCommonException;
 import com.dream.tea.service.model.user.User;
 import com.dream.tea.service.service.user.UserLoginService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,6 +27,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author yongfa
  */
+@Api(tags = "user用户表相关")
 @RestController
 @RequestMapping("/o/user")
 public class UserController {

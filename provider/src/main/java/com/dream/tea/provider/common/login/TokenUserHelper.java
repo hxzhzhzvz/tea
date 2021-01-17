@@ -12,7 +12,7 @@ public class TokenUserHelper {
     /**
      * 设置当前用户
      *
-     * @param jwtPayload
+     * @param jwtPayload 用户信息载荷
      */
     public static void setCurrUser(JwtPayload jwtPayload) {
         USER_HOLDER.set(jwtPayload);
@@ -21,7 +21,7 @@ public class TokenUserHelper {
     /**
      * 获取当前登录用户信息
      *
-     * @return
+     * @return 获取用户信息载荷
      */
     public static JwtPayload getCurrUser() {
         return USER_HOLDER.get();

@@ -1,5 +1,6 @@
 package com.dream.tea.provider.common.login.interceptor;
 
+import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.json.JSONUtil;
 import com.dream.tea.provider.common.bean.BaseResultCode;
 import com.dream.tea.provider.common.bean.RespResult;
@@ -8,6 +9,7 @@ import com.dream.tea.provider.common.login.annotation.LoginRequired;
 import com.dream.tea.provider.common.login.config.JwtAuthConfig;
 import com.dream.tea.provider.common.login.entity.JwtPayload;
 import com.dream.tea.provider.common.login.utils.ResponseHelper;
+import com.dream.tea.provider.common.login.utils.SecretUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.core.Ordered;
@@ -33,29 +35,33 @@ public class JwtUserAuthInterceptor implements HandlerInterceptor, Ordered {
     @Resource
     private StringRedisTemplate stringRedisTemplate;
 
+    @Resource
+    private SecretUtils secretUtils;
+
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         LoginRequired loginRequired = getLoginRequiredAnnotation(handler);
-        if (loginRequired == null) {
+        if (ObjectUtil.isNull(loginRequired)) {
             return true;
         }
-        String tokenKey = request.getHeader(jwtAuthConfig.getAuthKey());
-        if (StringUtils.isBlank(tokenKey)) {
-            String jsonContentValue = stringRedisTemplate.opsForValue().get(jwtAuthConfig.getTokenRedisKeyPrefix() + tokenKey);
+        String authKey = request.getHeader(jwtAuthConfig.getAuthKey());
+        if (StringUtils.isNotBlank(authKey)) {
+            String jsonContentValue = stringRedisTemplate.opsForValue().get(jwtAuthConfig.getTokenRedisKeyPrefix() + authKey);
             if (StringUtils.isBlank(jsonContentValue)) {
                 RespResult<Object> respResult = RespResult.failed(BaseResultCode.AUTH_FAILED_CODE, BaseResultCode.AUTH_FAILED_MSG);
                 ResponseHelper.renderJson(response, JSONUtil.toJsonStr(respResult));
                 return false;
             } else {
-                JwtPayload jwtPayload = JSONUtil.toBean(jsonContentValue, JwtPayload.class);
+                JwtPayload jwtPayload = secretUtils.parseToken(authKey);
                 TokenUserHelper.setCurrUser(jwtPayload);
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
     @Override
-    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
         TokenUserHelper.clear();
     }
 
@@ -68,7 +74,7 @@ public class JwtUserAuthInterceptor implements HandlerInterceptor, Ordered {
      * 从请求处理器中的此次方法中获取到此次请求方法
      *
      * @param handler 被拦截的处理器
-     * @return
+     * @return 注解对象
      */
     private LoginRequired getLoginRequiredAnnotation(Object handler) {
         LoginRequired loginRequired = null;

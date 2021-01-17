@@ -41,8 +41,8 @@ public class SecretUtils {
     /**
      * 创建token
      *
-     * @param jwtPayload
-     * @return
+     * @param jwtPayload 用户的信息的载荷
+     * @return 加密后的字符串
      */
     public String createToken(JwtPayload jwtPayload) {
         String subjectStr = JSONUtil.toJsonStr(jwtPayload);
@@ -56,21 +56,17 @@ public class SecretUtils {
     /**
      * 解析token
      *
-     * @param userTokenStr
-     * @return
+     * @param userTokenStr 加密字符串
+     * @return 解析出来的用户信息载荷对象
      */
     public JwtPayload parseToken(String userTokenStr) {
         String subjectStr;
         try {
             subjectStr = Jwts.parser()
-                    .setAllowedClockSkewSeconds(jwtAuthConfig.getSkewSeconds())
+                   // .setAllowedClockSkewSeconds(jwtAuthConfig.getSkewSeconds())
                     .setSigningKey(publicKey)
                     .parseClaimsJws(userTokenStr).getBody().getSubject();
-        } catch (ExpiredJwtException e) {
-            return null;
-        } catch (UnsupportedJwtException
-                | IllegalArgumentException
-                | MalformedJwtException e) {
+        } catch (ExpiredJwtException | UnsupportedJwtException | IllegalArgumentException | MalformedJwtException e) {
             return null;
         }
         return JSONUtil.toBean(subjectStr, JwtPayload.class);
