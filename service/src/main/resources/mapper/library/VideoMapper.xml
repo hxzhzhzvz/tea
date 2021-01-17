@@ -14,6 +14,6 @@
   <select id="getByVideoListId" resultMap="BaseResultMap">
     select id, video_list_id, name, cover_url, video_url, gmt_create, gmt_update
     from video
-    where video_list_id = #{id,jdbcType=BIGINT}
+    where video_list_id = #{videoListId,jdbcType=BIGINT}
   </select>
 </mapper>

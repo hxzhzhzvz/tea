@@ -1,6 +1,7 @@
 package com.dream.tea.service.mapper.config;
 
 import com.dream.tea.service.model.config.Banner;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -18,6 +19,6 @@ public interface BannerMapper {
      * @param status 0是禁用状态，1是生效状态
      * @return
      */
-    List<Banner> getBannerByStatus(Integer status);
+    List<Banner> getBannerByStatus(@Param("status") Integer status);
 
 }

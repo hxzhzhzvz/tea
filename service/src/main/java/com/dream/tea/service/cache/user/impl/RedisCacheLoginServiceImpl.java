@@ -29,18 +29,16 @@ public class RedisCacheLoginServiceImpl implements CacheLoginService {
     @Override
     public boolean allowTryToLogin(String account) {
         String key = REDIS_KEY_PREFIX + "allowTryToLogin:" + account;
-        Boolean result = stringRedisTemplate.opsForValue().setIfAbsent(key, profileConfig.getLoginMaxTryTimes().toString(), profileConfig.getLoginCollectLimitRange(), TimeUnit.MINUTES);
-        if (ObjectUtil.isNotNull(result) && result) {
-            return true;
-        } else {
-            Boolean keyExists = stringRedisTemplate.hasKey(key);
-            if (ObjectUtil.isNotNull(keyExists) && keyExists) {
-                // 防止出现key不会过期的情况
-                Long decrResult = stringRedisTemplate.opsForValue().decrement(key);
-                return ObjectUtil.isNotNull(decrResult) && (decrResult >= 0);
+        Boolean setRes = stringRedisTemplate.opsForValue().setIfAbsent(key, "1"
+                , profileConfig.getLoginCollectLimitRange(), TimeUnit.MINUTES);
+        if (ObjectUtil.isNotNull(setRes)) {
+            if (setRes) {
+                return true;
             } else {
-                return false;
+                Long incrRes = stringRedisTemplate.opsForValue().increment(key);
+                return ObjectUtil.isNotNull(incrRes) && (incrRes <= profileConfig.getLoginMaxTryTimes());
             }
         }
+        return false;
     }
 }

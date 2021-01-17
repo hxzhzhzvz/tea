@@ -6,11 +6,11 @@ import lombok.Data;
  * @author yongfa
  */
 @Data
-public class BaseCommonException extends RuntimeException {
+public class CommonBusinessException extends IllegalArgumentException {
 
     private ResultCodeEnum resultCodeEnum;
 
-    public BaseCommonException(ResultCodeEnum resultCodeEnum) {
+    public CommonBusinessException(ResultCodeEnum resultCodeEnum) {
         this.resultCodeEnum = resultCodeEnum;
     }
 }

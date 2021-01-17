@@ -2,7 +2,6 @@ package com.dream.tea.provider.common.login.interceptor;
 
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.json.JSONUtil;
-import com.dream.tea.provider.common.bean.BaseResultCode;
 import com.dream.tea.provider.common.bean.RespResult;
 import com.dream.tea.provider.common.login.TokenUserHelper;
 import com.dream.tea.provider.common.login.annotation.LoginRequired;
@@ -10,6 +9,7 @@ import com.dream.tea.provider.common.login.config.JwtAuthConfig;
 import com.dream.tea.provider.common.login.entity.JwtPayload;
 import com.dream.tea.provider.common.login.utils.ResponseHelper;
 import com.dream.tea.provider.common.login.utils.SecretUtils;
+import com.dream.tea.service.common.bean.ResultCodeEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.core.Ordered;
@@ -21,6 +21,8 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import static com.dream.tea.service.common.bean.ResultCodeEnum.NOT_LOGIN_YET;
 
 /**
  * @author yongfa
@@ -48,7 +50,8 @@ public class JwtUserAuthInterceptor implements HandlerInterceptor, Ordered {
         if (StringUtils.isNotBlank(authKey)) {
             String jsonContentValue = stringRedisTemplate.opsForValue().get(jwtAuthConfig.getTokenRedisKeyPrefix() + authKey);
             if (StringUtils.isBlank(jsonContentValue)) {
-                RespResult<Object> respResult = RespResult.failed(BaseResultCode.AUTH_FAILED_CODE, BaseResultCode.AUTH_FAILED_MSG);
+                ResultCodeEnum resultCodeEnum = NOT_LOGIN_YET;
+                RespResult<Object> respResult = RespResult.failed(resultCodeEnum.getCode(), resultCodeEnum.getMsg());
                 ResponseHelper.renderJson(response, JSONUtil.toJsonStr(respResult));
                 return false;
             } else {
@@ -87,4 +90,6 @@ public class JwtUserAuthInterceptor implements HandlerInterceptor, Ordered {
         }
         return loginRequired;
     }
+
+
 }

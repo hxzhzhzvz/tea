@@ -9,7 +9,7 @@ import com.dream.tea.provider.vo.req.user.LoginReqVo;
 import com.dream.tea.provider.vo.req.user.RegisterReqVo;
 import com.dream.tea.provider.vo.resp.user.LoginRespVo;
 import com.dream.tea.provider.vo.resp.user.RegisterRespVo;
-import com.dream.tea.service.common.bean.BaseCommonException;
+import com.dream.tea.service.common.bean.CommonBusinessException;
 import com.dream.tea.service.model.user.User;
 import com.dream.tea.service.service.user.UserLoginService;
 import io.swagger.annotations.Api;
@@ -56,7 +56,7 @@ public class UserController {
             stringRedisTemplate.opsForValue().set(jwtAuthConfig.getTokenRedisKeyPrefix() + token, jwtAuthConfig.getTokenRedisValue(), jwtAuthConfig.getUserTokenExpireSecond(), TimeUnit.SECONDS);
             RegisterRespVo respVo = UserVoConverter.INSTANCE.tokenToRegisterRespVo(token);
             return RespResult.succeed(respVo);
-        } catch (BaseCommonException e) {
+        } catch (CommonBusinessException e) {
             return RespResult.failed(e.getResultCodeEnum());
         }
     }
@@ -71,7 +71,7 @@ public class UserController {
             stringRedisTemplate.opsForValue().set(jwtAuthConfig.getTokenRedisKeyPrefix() + token, jwtAuthConfig.getTokenRedisValue(), jwtAuthConfig.getUserTokenExpireSecond(), TimeUnit.SECONDS);
             LoginRespVo respVo = UserVoConverter.INSTANCE.tokenToLoginRespVo(token);
             return RespResult.succeed(respVo);
-        } catch (BaseCommonException e) {
+        } catch (CommonBusinessException e) {
             return RespResult.failed(e.getResultCodeEnum());
         }
     }

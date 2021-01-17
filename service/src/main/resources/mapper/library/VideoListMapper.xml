@@ -19,4 +19,19 @@
     </foreach>
     and `status` = #{status, jdbcType=TINYINT}
   </select>
+
+  <select id="getById" resultMap="BaseResultMap">
+    select id, name, cover_url, `status`, gmt_create, gmt_update
+    from video_list
+    where id=#{id, jdbcType=BIGINT}
+  </select>
+
+  <select id="getByVideoListIdList" resultMap="BaseResultMap">
+    select id, name, cover_url, `status`, gmt_create, gmt_update
+    from video_list
+    where id in
+    <foreach collection="videoListIdList" open="(" separator="," close=")" item="videoListId">
+      #{videoListId, jdbcType=BIGINT}
+    </foreach>
+  </select>
 </mapper>

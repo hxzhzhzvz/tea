@@ -8,7 +8,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-01-06T22:37:56+0800",
+    date = "2021-01-17T17:08:11+0800",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 1.8.0_201 (Oracle Corporation)"
 )
 public class BannerVoConverterImpl implements BannerVoConverter {

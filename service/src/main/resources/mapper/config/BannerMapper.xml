@@ -11,7 +11,7 @@
     <result column="gmt_update" jdbcType="TIMESTAMP" property="gmtUpdate" />
   </resultMap>
 
-  <select id="getBannerByStatus" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="getBannerByStatus" resultMap="BaseResultMap">
     select id, title, cover_url, link_url, `status`, gmt_create, gmt_update
     from banner
     where `status` = #{status,jdbcType=BIGINT}
