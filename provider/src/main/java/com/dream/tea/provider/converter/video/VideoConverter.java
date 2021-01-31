@@ -1,6 +1,7 @@
 package com.dream.tea.provider.converter.video;
 
 import com.dream.tea.provider.vo.resp.video.VideoListRespVo;
+import com.dream.tea.provider.vo.resp.video.VideoRespVo;
 import com.dream.tea.service.model.library.Video;
 import com.dream.tea.service.model.library.VideoList;
 import org.mapstruct.Mapper;

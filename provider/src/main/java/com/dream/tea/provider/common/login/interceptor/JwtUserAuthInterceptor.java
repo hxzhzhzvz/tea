@@ -51,7 +51,7 @@ public class JwtUserAuthInterceptor implements HandlerInterceptor, Ordered {
             String jsonContentValue = stringRedisTemplate.opsForValue().get(jwtAuthConfig.getTokenRedisKeyPrefix() + authKey);
             if (StringUtils.isBlank(jsonContentValue)) {
                 ResultCodeEnum resultCodeEnum = NOT_LOGIN_YET;
-                RespResult<Object> respResult = RespResult.failed(resultCodeEnum.getCode(), resultCodeEnum.getMsg());
+                RespResult<Void> respResult = RespResult.failed(resultCodeEnum.getCode(), resultCodeEnum.getMsg());
                 ResponseHelper.renderJson(response, JSONUtil.toJsonStr(respResult));
                 return false;
             } else {
@@ -59,8 +59,12 @@ public class JwtUserAuthInterceptor implements HandlerInterceptor, Ordered {
                 TokenUserHelper.setCurrUser(jwtPayload);
                 return true;
             }
+        } else {
+            ResultCodeEnum resultCodeEnum = NOT_LOGIN_YET;
+            RespResult<Void> respResult = RespResult.failed(resultCodeEnum.getCode(), resultCodeEnum.getMsg());
+            ResponseHelper.renderJson(response, JSONUtil.toJsonStr(respResult));
+            return false;
         }
-        return false;
     }
 
     @Override

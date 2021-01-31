@@ -1,5 +1,6 @@
 package com.dream.tea.provider.handler;
 
+import com.dream.tea.provider.common.bean.BaseResultCode;
 import com.dream.tea.provider.common.bean.RespResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -24,9 +25,14 @@ public class ExceptionHandlerInterceptor {
 
     @ResponseBody
     @ExceptionHandler(BindException.class)
-    public <T> RespResult<T> handler(HttpServletRequest request, HttpServletResponse response, BindException ex) {
+    public <T> RespResult<T> handlerBindException(HttpServletRequest request, HttpServletResponse response, BindException ex) {
         FieldError fieldError = ex.getFieldError();
-        System.out.println(ex.toString());
         return RespResult.failed(FIELD_NOT_VALID.getCode(), fieldError.getDefaultMessage());
+    }
+
+    @ResponseBody
+    @ExceptionHandler(Exception.class)
+    public <T> RespResult<T> handlerException(HttpServletRequest request, HttpServletResponse response, Exception ex) {
+        return RespResult.failed(BaseResultCode.BASE_ERROR_MSG);
     }
 }

@@ -16,8 +16,13 @@ public class MvcConfigurer implements WebMvcConfigurer {
     @Resource
     private JwtUserAuthInterceptor jwtUserAuthInterceptor;
 
+    @Resource
+    private AccessCountInterceptor accessCountInterceptor;
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(accessCountInterceptor)
+                .addPathPatterns("/**");
         registry.addInterceptor(jwtUserAuthInterceptor)
                 .addPathPatterns("/**");
     }

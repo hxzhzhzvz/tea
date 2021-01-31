@@ -19,14 +19,6 @@ public interface UserMapper {
     int insert(User record);
 
     /**
-     * 修改用户的一些基本信息
-     *
-     * @param record
-     * @return
-     */
-    int updateUserinfo(User record);
-
-    /**
      * 通过账号获取用户信息
      *
      * @param account

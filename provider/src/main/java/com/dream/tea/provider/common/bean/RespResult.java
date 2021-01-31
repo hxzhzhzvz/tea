@@ -7,7 +7,6 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @param <T>
  * @author yongfa
  */
 @Data
@@ -36,8 +35,8 @@ public class RespResult<T> implements Serializable {
     /**
      * 成功响应
      *
-     * @param <T>
-     * @return
+     * @param <T> 返回data的泛型
+     * @return 返回的vo封装对象
      */
     public static <T> RespResult<T> succeed() {
         return succeed(BaseResultCode.SUCCESS_MSG, null);
@@ -46,9 +45,9 @@ public class RespResult<T> implements Serializable {
     /**
      * 成功响应
      *
-     * @param data
-     * @param <T>
-     * @return
+     * @param data 返回的data
+     * @param <T>  返回data的泛型
+     * @return 返回的vo封装对象
      */
     public static <T> RespResult<T> succeed(T data) {
         return succeed(BaseResultCode.SUCCESS_MSG, data);
@@ -57,10 +56,10 @@ public class RespResult<T> implements Serializable {
     /**
      * 成功响应
      *
-     * @param msg
-     * @param data
-     * @param <T>
-     * @return
+     * @param msg  返回的提示信息
+     * @param data 返回的data
+     * @param <T>  返回data的泛型
+     * @return 返回的vo封装对象
      */
     public static <T> RespResult<T> succeed(String msg, T data) {
         return new RespResult(BaseResultCode.SUCCESS_CODE, msg, data);
@@ -69,18 +68,28 @@ public class RespResult<T> implements Serializable {
     /**
      * 判断响应是否成功
      *
-     * @return
+     * @return 判断结果
      */
     public Boolean isSucceed() {
         return BaseResultCode.SUCCESS_CODE.equals(this.code);
     }
 
+
     /**
      * 响应失败
      *
-     * @param msg
-     * @param <T>
-     * @return
+     * @return 返回的vo封装对象
+     */
+    public static RespResult failed() {
+        return failed(BaseResultCode.BASE_ERROR_MSG);
+    }
+
+    /**
+     * 响应失败
+     *
+     * @param msg 错误提示信息
+     * @param <T> 返回的data的泛型
+     * @return 返回的vo封装对象
      */
     public static <T> RespResult<T> failed(String msg) {
         return failed(BaseResultCode.BASE_ERROR_CODE, msg);
@@ -89,10 +98,10 @@ public class RespResult<T> implements Serializable {
     /**
      * 响应失败
      *
-     * @param code
-     * @param msg
-     * @param <T>
-     * @return
+     * @param code 返回的错误码
+     * @param msg  错误提示信息
+     * @param <T>  返回的data的泛型
+     * @return 返回的vo封装对象
      */
     public static <T> RespResult<T> failed(Integer code, String msg) {
         return new RespResult(code, msg, null);
@@ -101,9 +110,9 @@ public class RespResult<T> implements Serializable {
     /**
      * 响应失败
      *
-     * @param resultCodeEnum
-     * @param <T>
-     * @return
+     * @param resultCodeEnum 错误的信息枚举
+     * @param <T>            返回的data的泛型
+     * @return 返回的vo封装对象
      */
     public static <T> RespResult<T> failed(ResultCodeEnum resultCodeEnum) {
         return new RespResult(resultCodeEnum.getCode(), resultCodeEnum.getMsg(), null);

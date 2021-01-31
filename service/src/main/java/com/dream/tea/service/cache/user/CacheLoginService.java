@@ -8,8 +8,8 @@ public interface CacheLoginService {
     /**
      * 是否允许该账号继续尝试登录
      *
-     * @param account
-     * @return
+     * @param account 账号
+     * @return 判断结果
      */
     boolean allowTryToLogin(String account);
 }

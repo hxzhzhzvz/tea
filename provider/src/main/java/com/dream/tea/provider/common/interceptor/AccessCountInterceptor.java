@@ -4,8 +4,11 @@ import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.json.JSONUtil;
 import com.dream.tea.provider.common.bean.RespResult;
 import com.dream.tea.provider.common.login.utils.ResponseHelper;
+import com.dream.tea.provider.common.login.utils.UserUtils;
 import com.dream.tea.provider.utils.IpUtils;
 import com.dream.tea.service.common.bean.ResultCodeEnum;
+import com.dream.tea.service.service.logs.AccessLogService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.core.Ordered;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -23,6 +26,7 @@ import static com.dream.tea.service.common.bean.ResultCodeEnum.ACCESS_IP_FAILED;
 /**
  * @author yongfa
  */
+@Slf4j
 @Component
 public class AccessCountInterceptor implements HandlerInterceptor, Ordered {
 
@@ -33,8 +37,24 @@ public class AccessCountInterceptor implements HandlerInterceptor, Ordered {
     @Resource
     private StringRedisTemplate stringRedisTemplate;
 
+    @Resource
+    private UserUtils userUtils;
+
+    @Resource
+    private AccessLogService accessLogService;
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
+        // 记录访问日志，用来日后做用户分析
+        try {
+            Long userId = userUtils.getUserIdFromRequest(request);
+            String uri = request.getRequestURI();
+            accessLogService.addAccessLog(userId, uri);
+        } catch (Exception e) {
+            // 打少一点日志，没钱
+            log.error("记录访问日志异常:{}", e.getMessage());
+        }
+        // 起到网关限流作用，过滤掉异常访问请求
         boolean result = false;
         String ipAddr = IpUtils.getIpAddr(request);
         if (StringUtils.isBlank(ipAddr)) {
@@ -44,7 +64,7 @@ public class AccessCountInterceptor implements HandlerInterceptor, Ordered {
             result = false;
         } else {
             String key = KEY_PREFIX + ipAddr;
-            Boolean setRes = stringRedisTemplate.opsForValue().setIfAbsent(key, "1", 1, TimeUnit.DAYS);
+            Boolean setRes = stringRedisTemplate.opsForValue().setIfAbsent(key, "1", 1, TimeUnit.HOURS);
             if (ObjectUtil.isNotNull(setRes)) {
                 if (setRes) {
                     result = true;

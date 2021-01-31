@@ -1,4 +1,4 @@
-package com.dream.tea.service.model.user;
+package com.dream.tea.service.model.log;
 
 import lombok.Data;
 
@@ -8,30 +8,29 @@ import java.util.Date;
  * @author yongfa
  */
 @Data
-public class User {
-
+public class AccessLog {
     /**
      * 自增id
      */
     private Long id;
 
     /**
-     * 账号
+     * 用户的id
      */
-    private String account;
+    private Long userId;
 
     /**
-     * 密码
+     * 访问的uri
      */
-    private String password;
+    private String uri;
 
     /**
-     * 账号的创建时间
+     * 记录的插入时间
      */
     private Date gmtCreate;
 
     /**
-     * 记录的最近修改时间
+     * 最近更新时间
      */
     private Date gmtUpdate;
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dream.tea.service.mapper.log.AccessLogMapper">
+  <resultMap id="BaseResultMap" type="com.dream.tea.service.model.log.AccessLog">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="uri" jdbcType="VARCHAR" property="uri" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_update" jdbcType="TIMESTAMP" property="gmtUpdate" />
+  </resultMap>
+  <insert id="insert" parameterType="com.dream.tea.service.model.log.AccessLog">
+    insert into access_log (user_id, uri)
+    values (#{userId,jdbcType=BIGINT}, #{uri,jdbcType=VARCHAR})
+  </insert>
+</mapper>

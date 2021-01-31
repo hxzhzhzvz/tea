@@ -18,7 +18,7 @@ public class RedisCacheLoginServiceImpl implements CacheLoginService {
     /**
      * redis key前缀
      */
-    private static final String REDIS_KEY_PREFIX = "login:";
+    private static final String REDIS_KEY_PREFIX = "restrict:login:";
 
     @Resource
     private ProfileConfig profileConfig;

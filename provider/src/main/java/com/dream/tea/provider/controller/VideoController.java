@@ -2,7 +2,7 @@ package com.dream.tea.provider.controller;
 
 import com.dream.tea.provider.common.bean.RespResult;
 import com.dream.tea.provider.converter.video.VideoConverter;
-import com.dream.tea.provider.converter.video.VideoRespVo;
+import com.dream.tea.provider.vo.resp.video.VideoRespVo;
 import com.dream.tea.provider.vo.resp.video.VideoListRespVo;
 import com.dream.tea.service.model.library.Video;
 import com.dream.tea.service.model.library.VideoList;

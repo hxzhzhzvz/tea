@@ -18,8 +18,8 @@ public interface BannerVoConverter {
     /**
      * 将banner列表转成banner的vo列表
      *
-     * @param bannerList
-     * @return
+     * @param bannerList 对象列表
+     * @return 转换后的vo列表
      */
     List<BannerRespVo> bannerListToBannerVoList(List<Banner> bannerList);
 }
