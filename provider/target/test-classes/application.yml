@@ -1,0 +1,15 @@
+server:
+  port: 8050
+spring:
+  application:
+    name: tea
+  redis:
+    host: 121.5.62.86
+    port: 6379
+    password: yaya
+    client-type: lettuce
+  profiles:
+    include: mysql
+logging:
+  level:
+    com: info

@@ -12,6 +12,7 @@ public enum ResultCodeEnum {
     SUCCESS(0, "OK"),
 
     // 1开头与登录有关
+    COMMON_FAILED(100, "服务器正忙，请稍后重试！"),
     ACCOUNT_NOT_EXISTS(101, "账号不存在"),
     PASSWORD_INCORRECT(102, "密码不正确"),
     TOO_MANY_ATTEMPTS_FOR_THIS_ACCOUNT(103, "短时间内该账号的尝试次数太多，有被恶意破解的风险。现该账户已被禁用，请10分钟后再重试！"),

@@ -25,6 +25,14 @@ public class RespResult<T> implements Serializable {
      */
     protected T data;
 
+    public RespResult() {
+    }
+
+    public RespResult(Integer code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+
     public RespResult(Integer code, String msg, T data) {
         this.code = code;
         this.msg = msg;
@@ -56,13 +64,13 @@ public class RespResult<T> implements Serializable {
     /**
      * 成功响应
      *
+     * @param <T>  返回data的泛型
      * @param msg  返回的提示信息
      * @param data 返回的data
-     * @param <T>  返回data的泛型
      * @return 返回的vo封装对象
      */
     public static <T> RespResult<T> succeed(String msg, T data) {
-        return new RespResult(BaseResultCode.SUCCESS_CODE, msg, data);
+        return new RespResult<>(BaseResultCode.SUCCESS_CODE, msg, data);
     }
 
     /**
@@ -80,7 +88,7 @@ public class RespResult<T> implements Serializable {
      *
      * @return 返回的vo封装对象
      */
-    public static RespResult failed() {
+    public static <T> RespResult<T> failed() {
         return failed(BaseResultCode.BASE_ERROR_MSG);
     }
 
@@ -98,13 +106,13 @@ public class RespResult<T> implements Serializable {
     /**
      * 响应失败
      *
+     * @param <T>  返回的data的泛型
      * @param code 返回的错误码
      * @param msg  错误提示信息
-     * @param <T>  返回的data的泛型
      * @return 返回的vo封装对象
      */
     public static <T> RespResult<T> failed(Integer code, String msg) {
-        return new RespResult(code, msg, null);
+        return new RespResult<>(code, msg);
     }
 
     /**
@@ -115,7 +123,7 @@ public class RespResult<T> implements Serializable {
      * @return 返回的vo封装对象
      */
     public static <T> RespResult<T> failed(ResultCodeEnum resultCodeEnum) {
-        return new RespResult(resultCodeEnum.getCode(), resultCodeEnum.getMsg(), null);
+        return failed(resultCodeEnum.getCode(), resultCodeEnum.getMsg());
     }
 
 }

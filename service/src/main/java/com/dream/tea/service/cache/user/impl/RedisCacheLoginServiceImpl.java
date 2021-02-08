@@ -3,6 +3,7 @@ package com.dream.tea.service.cache.user.impl;
 import cn.hutool.core.util.ObjectUtil;
 import com.dream.tea.service.cache.user.CacheLoginService;
 import com.dream.tea.service.common.config.ProfileConfig;
+import com.dream.tea.service.common.constants.RedisKeyPrefixConstants;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,7 @@ public class RedisCacheLoginServiceImpl implements CacheLoginService {
     /**
      * redis key前缀
      */
-    private static final String REDIS_KEY_PREFIX = "restrict:login:";
+    private static final String REDIS_KEY_PREFIX = RedisKeyPrefixConstants.RESTRICT_LOGIN;
 
     @Resource
     private ProfileConfig profileConfig;

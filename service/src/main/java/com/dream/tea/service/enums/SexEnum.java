@@ -8,13 +8,40 @@ import lombok.Getter;
 @Getter
 public enum SexEnum {
 
-    UNKNOWN(0),
-    BOY(1),
-    GIRL(2);
+    /**
+     * 性别枚举类
+     */
+    UNKNOWN(0, "未知"),
+    BOY(1, "男孩"),
+    GIRL(2, "女孩");
 
-    private Integer sex;
+    /**
+     * 性别类型
+     */
+    private final Integer sex;
 
-    SexEnum(Integer sex) {
-        this.sex = sex;
+    /**
+     * 描述
+     */
+    private final String description;
+
+    SexEnum(Integer sex1, String description) {
+        this.sex = sex1;
+        this.description = description;
+    }
+
+    /**
+     * 通过sex获取到对应的枚举类
+     *
+     * @param sex 类型取值
+     * @return 枚举对象
+     */
+    public static SexEnum of(Integer sex) {
+        for (SexEnum value : SexEnum.values()) {
+            if (value.getSex().equals(sex)) {
+                return value;
+            }
+        }
+        return UNKNOWN;
     }
 }

@@ -26,65 +26,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ce915ee-7742-41c0-9f20-5121a83ea29e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/provider/src/main/resources/application-login.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider/src/test/java/com/dream/tea/provider/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider/src/test/java/com/dream/tea/provider/service/user/RsaUtilTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/bean/BusinessException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/db/source/LogDataSourceConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/service/logs/AccessLogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/service/logs/impl/AccessLogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/provider/src/test/java/com/dream/tea/provider/service/utils/QrCodeUtilsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/constants/RedisKeyPrefixConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/utils/QrCodeUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/bean/BaseResultCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/bean/BaseResultCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/bean/RespResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/bean/RespResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/interceptor/AccessCountInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/interceptor/AccessCountInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/interceptor/MvcConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/interceptor/MvcConfigurer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/login/config/JwtAuthConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/login/config/JwtAuthConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/login/interceptor/JwtUserAuthInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/login/interceptor/JwtUserAuthInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/swagger/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/swagger/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/converter/banner/BannerVoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/converter/banner/BannerVoConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/converter/user/UserVoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/converter/user/UserVoConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/converter/video/VideoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/converter/video/VideoConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/converter/video/VideoRespVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/vo/resp/video/VideoRespVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/handler/ExceptionHandlerInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/handler/ExceptionHandlerInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/resources/application-mysql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/resources/application-mysql.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/test/java/com/dream/tea/provider/service/user/UserUserLoginServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/test/java/com/dream/tea/provider/service/user/UserUserLoginServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/test/resources/code_generator.txt" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/test/resources/code_generator.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/application-mysql.properties" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/classes/application-mysql.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/bean/BaseResultCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/bean/BaseResultCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/bean/RespResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/bean/RespResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/interceptor/MvcConfigurer.class" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/interceptor/MvcConfigurer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/login/config/JwtAuthConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/login/config/JwtAuthConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/login/interceptor/JwtUserAuthInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/login/interceptor/JwtUserAuthInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/swagger/SwaggerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/common/swagger/SwaggerConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/controller/VideoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/controller/VideoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/converter/user/UserVoConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/converter/user/UserVoConverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/converter/user/UserVoConverterImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/converter/user/UserVoConverterImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/converter/video/VideoConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/converter/video/VideoConverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/converter/video/VideoConverterImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/converter/video/VideoConverterImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/converter/video/VideoRespVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/handler/ExceptionHandlerInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/classes/com/dream/tea/provider/handler/ExceptionHandlerInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/generated-sources/annotations/com/dream/tea/provider/converter/app/AppVersionConverterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/generated-sources/annotations/com/dream/tea/provider/converter/app/AppVersionConverterImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/generated-sources/annotations/com/dream/tea/provider/converter/app/DeveloperConverterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/generated-sources/annotations/com/dream/tea/provider/converter/app/DeveloperConverterImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/generated-sources/annotations/com/dream/tea/provider/converter/banner/BannerVoConverterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/generated-sources/annotations/com/dream/tea/provider/converter/banner/BannerVoConverterImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/generated-sources/annotations/com/dream/tea/provider/converter/user/UserVoConverterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/generated-sources/annotations/com/dream/tea/provider/converter/user/UserVoConverterImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/generated-sources/annotations/com/dream/tea/provider/converter/video/VideoConverterImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/generated-sources/annotations/com/dream/tea/provider/converter/video/VideoConverterImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/test-classes/code_generator.txt" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/test-classes/code_generator.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/target/test-classes/com/dream/tea/provider/service/user/UserUserLoginServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/provider/target/test-classes/com/dream/tea/provider/service/user/UserUserLoginServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/cache/user/CacheLoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/cache/user/CacheLoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/cache/app/impl/RedisCacheUserFeedbackServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/cache/app/impl/RedisCacheUserFeedbackServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/cache/lock/impl/LockServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/cache/lock/impl/LockServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/cache/user/impl/RedisCacheLoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/cache/user/impl/RedisCacheLoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/bean/CommonBusinessException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/bean/BusinessException.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/bean/BusinessException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/bean/ResultCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/bean/ResultCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/mapper/user/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/mapper/user/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/model/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/model/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/service/user/impl/UserLoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/service/user/impl/UserLoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/resources/mapper/user/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/resources/mapper/user/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/enums/SexEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/enums/SexEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/enums/StatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/enums/StatusEnum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,6 +132,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="QrCodeUtilsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dream.tea.provider.service.utils.QrCodeUtilsTest" />
+      <module name="provider" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dream.tea.provider.service.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RsaUtilTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.dream.tea.provider.service.user.RsaUtilTest" />
       <module name="provider" />
@@ -196,22 +165,6 @@
         </value>
       </option>
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserUserLoginServiceTest.getUserByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="provider" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dream.tea.provider.service.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.dream.tea.provider.service.user" />
-      <option name="MAIN_CLASS_NAME" value="com.dream.tea.provider.service.user.UserUserLoginServiceTest" />
-      <option name="METHOD_NAME" value="getUserByIdTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -241,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.QrCodeUtilsTest" />
         <item itemvalue="Application.RsaUtilTest" />
         <item itemvalue="Application.CodeGenerator" />
         <item itemvalue="Application.Demo" />
         <item itemvalue="JUnit.UserUserLoginServiceTest.registerTest" />
-        <item itemvalue="JUnit.UserUserLoginServiceTest.getUserByIdTest" />
       </list>
     </recent_temporary>
   </component>
@@ -273,7 +226,11 @@
       <workItem from="1611669231859" duration="66000" />
       <workItem from="1611669543232" duration="3833000" />
       <workItem from="1612062247673" duration="7940000" />
-      <workItem from="1612081541535" duration="4405000" />
+      <workItem from="1612081541535" duration="7741000" />
+      <workItem from="1612104204198" duration="360000" />
+      <workItem from="1612316840897" duration="234000" />
+      <workItem from="1612317508116" duration="1091000" />
+      <workItem from="1612745297421" duration="3207000" />
     </task>
     <task id="LOCAL-00001" summary="项目结构搭建成功">
       <created>1609595600556</created>
@@ -310,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610898410111</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="登陆bug修复">
+      <created>1612096038500</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1612096038500</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +296,8 @@
     <MESSAGE value="项目结构搭建成功" />
     <MESSAGE value="用户端接口提供" />
     <MESSAGE value="代码提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="代码提交" />
+    <MESSAGE value="登陆bug修复" />
+    <option name="LAST_COMMIT_MESSAGE" value="登陆bug修复" />
   </component>
   <component name="WindowStateProjectService">
     <state x="555" y="254" width="631" height="202" key="#Custom_Plugin_Repositories" timestamp="1610849219608">
@@ -355,14 +320,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="435" y="164" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1609566887550" />
-    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1612065343669">
+    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1612747454844">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1612065343669" />
-    <state x="313" y="286" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1610876524384">
+    <state x="488" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1612747454844" />
+    <state x="313" y="286" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1612746843962">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="313" y="286" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1610876524384" />
+    <state x="313" y="286" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1612746843962" />
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1610875156204">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -375,70 +340,74 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="438" y="65" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1609594897895" />
-    <state x="245" y="0" key="CommitChangelistDialog2" timestamp="1610898407211">
+    <state x="245" y="0" key="CommitChangelistDialog2" timestamp="1612096034310">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="245" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610898407211" />
+    <state x="245" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1612096034310" />
     <state x="434" y="105" key="FileChooserDialogImpl" timestamp="1610899841612">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="434" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610899841612" />
-    <state width="1323" height="220" key="GridCell.Tab.0.bottom" timestamp="1612083111574">
+    <state width="197" height="384" key="Git.Branch.Popup" timestamp="1612748061212">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1612083111574" />
-    <state width="1323" height="220" key="GridCell.Tab.0.center" timestamp="1612083111573">
+    <state width="197" height="384" key="Git.Branch.Popup/0.0.1366.728@0.0.1366.728" timestamp="1612748061212" />
+    <state width="1323" height="140" key="GridCell.Tab.0.bottom" timestamp="1612104600895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1612083111573" />
-    <state width="1323" height="220" key="GridCell.Tab.0.left" timestamp="1612083111572">
+    <state width="1323" height="140" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1612104600895" />
+    <state width="1323" height="140" key="GridCell.Tab.0.center" timestamp="1612104600895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1612083111572" />
-    <state width="1323" height="220" key="GridCell.Tab.0.right" timestamp="1612083111573">
+    <state width="1323" height="140" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1612104600895" />
+    <state width="1323" height="140" key="GridCell.Tab.0.left" timestamp="1612104600894">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1612083111573" />
-    <state width="1323" height="220" key="GridCell.Tab.1.bottom" timestamp="1612095652482">
+    <state width="1323" height="140" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1612104600894" />
+    <state width="1323" height="140" key="GridCell.Tab.0.right" timestamp="1612104600895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1612095652482" />
-    <state width="1323" height="220" key="GridCell.Tab.1.center" timestamp="1612095652481">
+    <state width="1323" height="140" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1612104600895" />
+    <state width="1323" height="259" key="GridCell.Tab.1.bottom" timestamp="1612097078063">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1612095652481" />
-    <state width="1323" height="220" key="GridCell.Tab.1.left" timestamp="1612095652480">
+    <state width="1323" height="259" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1612097078063" />
+    <state width="1323" height="259" key="GridCell.Tab.1.center" timestamp="1612097078063">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1612095652480" />
-    <state width="1323" height="220" key="GridCell.Tab.1.right" timestamp="1612095652482">
+    <state width="1323" height="259" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1612097078063" />
+    <state width="1323" height="259" key="GridCell.Tab.1.left" timestamp="1612097078063">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1612095652482" />
-    <state width="1323" height="220" key="GridCell.Tab.2.bottom" timestamp="1612083111232">
+    <state width="1323" height="259" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1612097078063" />
+    <state width="1323" height="259" key="GridCell.Tab.1.right" timestamp="1612097078063">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1612083111232" />
-    <state width="1323" height="220" key="GridCell.Tab.2.center" timestamp="1612083111231">
+    <state width="1323" height="259" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1612097078063" />
+    <state width="1323" height="259" key="GridCell.Tab.2.bottom" timestamp="1612097078063">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1612083111231" />
-    <state width="1323" height="220" key="GridCell.Tab.2.left" timestamp="1612083111231">
+    <state width="1323" height="259" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1612097078063" />
+    <state width="1323" height="259" key="GridCell.Tab.2.center" timestamp="1612097078063">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1612083111231" />
-    <state width="1323" height="220" key="GridCell.Tab.2.right" timestamp="1612083111232">
+    <state width="1323" height="259" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1612097078063" />
+    <state width="1323" height="259" key="GridCell.Tab.2.left" timestamp="1612097078063">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1612083111232" />
+    <state width="1323" height="259" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1612097078063" />
+    <state width="1323" height="259" key="GridCell.Tab.2.right" timestamp="1612097078063">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="259" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1612097078063" />
     <state width="220" height="477" key="HiddenNamespacesPopup" timestamp="1610850843690">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="220" height="477" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1610850843690" />
-    <state x="263" y="98" key="IDE.errors.dialog" timestamp="1612065587173">
+    <state x="263" y="98" key="IDE.errors.dialog" timestamp="1612100346519">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="263" y="98" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1612065587173" />
+    <state x="263" y="98" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1612100346519" />
     <state x="492" y="65" key="RollbackChangesDialog" timestamp="1609566853526">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -455,18 +424,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="477" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1609949139451" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1610898421191">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1612096043526">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1610898421191" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612096043526" />
     <state x="427" y="0" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610850801652">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="427" y="0" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1610850801652" />
-    <state x="486" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612066604167">
+    <state x="486" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612097017218">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="486" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1612066604167" />
+    <state x="486" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1612097017218" />
     <state x="131" y="86" width="1104" height="642" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1610894504342">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -479,34 +448,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="600" height="428" key="javadoc.popup/0.0.1366.728@0.0.1366.728" timestamp="1610896425275" />
-    <state x="57" y="24" key="new project wizard" timestamp="1611402026309">
+    <state x="57" y="24" key="new project wizard" timestamp="1612317078868">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="57" y="24" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1611402026309" />
+    <state x="57" y="24" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1612317078868" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1610892989625">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610892989625" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/controller/UserController.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/controller/UserController.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/handler/ExceptionHandlerInterceptor.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

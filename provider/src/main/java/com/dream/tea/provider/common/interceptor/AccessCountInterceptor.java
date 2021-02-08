@@ -7,6 +7,7 @@ import com.dream.tea.provider.common.login.utils.ResponseHelper;
 import com.dream.tea.provider.common.login.utils.UserUtils;
 import com.dream.tea.provider.utils.IpUtils;
 import com.dream.tea.service.common.bean.ResultCodeEnum;
+import com.dream.tea.service.common.constants.RedisKeyPrefixConstants;
 import com.dream.tea.service.service.logs.AccessLogService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -30,7 +31,10 @@ import static com.dream.tea.service.common.bean.ResultCodeEnum.ACCESS_IP_FAILED;
 @Component
 public class AccessCountInterceptor implements HandlerInterceptor, Ordered {
 
-    private static final String KEY_PREFIX = "access:";
+    /**
+     * 业务前缀
+     */
+    private static final String KEY_PREFIX = RedisKeyPrefixConstants.ACCESS;
 
     private static final int ONE_HOUR_ACCESS_LIMIT = 500;
 

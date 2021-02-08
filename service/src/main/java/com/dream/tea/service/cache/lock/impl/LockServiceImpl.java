@@ -2,6 +2,7 @@ package com.dream.tea.service.cache.lock.impl;
 
 import cn.hutool.core.util.ObjectUtil;
 import com.dream.tea.service.cache.lock.LockService;
+import com.dream.tea.service.common.constants.RedisKeyPrefixConstants;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
@@ -18,7 +19,7 @@ public class LockServiceImpl implements LockService {
     /**
      * 锁缓存的前缀
      */
-    private static final String KEY_PREFIX = "lock:";
+    private static final String KEY_PREFIX = RedisKeyPrefixConstants.COMMON_LOCK;
 
     @Resource
     private StringRedisTemplate stringRedisTemplate;

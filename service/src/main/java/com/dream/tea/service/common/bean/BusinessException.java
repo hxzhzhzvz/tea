@@ -1,14 +1,15 @@
 package com.dream.tea.service.common.bean;
 
 import cn.hutool.core.util.ObjectUtil;
-import lombok.Data;
 
 /**
  * @author yongfa
  */
-@Data
 public class BusinessException extends IllegalArgumentException {
 
+    /**
+     * 异常信息枚举类
+     */
     private ResultCodeEnum resultCodeEnum;
 
     public BusinessException(ResultCodeEnum resultCodeEnum) {
@@ -27,7 +28,15 @@ public class BusinessException extends IllegalArgumentException {
         if (ObjectUtil.isNotNull(resultCodeEnum)) {
             return resultCodeEnum.getMsg();
         } else {
-            return "服务器繁忙，请稍后重试！";
+            return ResultCodeEnum.COMMON_FAILED.getMsg();
         }
+    }
+
+    public ResultCodeEnum getResultCodeEnum() {
+        return resultCodeEnum;
+    }
+
+    public void setResultCodeEnum(ResultCodeEnum resultCodeEnum) {
+        this.resultCodeEnum = resultCodeEnum;
     }
 }
