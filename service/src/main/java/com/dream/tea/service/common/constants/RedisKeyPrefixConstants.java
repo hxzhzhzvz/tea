@@ -26,4 +26,19 @@ public class RedisKeyPrefixConstants {
      * 访问请求业务
      */
     public static final String ACCESS = "access:";
+
+    /**
+     * token的业务前缀
+     */
+    public static final String TOKEN_REDIS_KEY_PREFIX = "token:";
+
+    /**
+     * 账号的业务前缀
+     */
+    public static final String ACCOUNT_REDIS_KEY_PREFIX = "account:";
+
+    /**
+     * token的默认取值
+     */
+    public static final String TOKEN_REDIS_VALUE = "login";
 }

@@ -26,21 +26,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ce915ee-7742-41c0-9f20-5121a83ea29e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/provider/src/test/java/com/dream/tea/provider/service/utils/QrCodeUtilsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/constants/RedisKeyPrefixConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/utils/QrCodeUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/bean/RespResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/bean/RespResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/interceptor/AccessCountInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/interceptor/AccessCountInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/handler/ExceptionHandlerInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/handler/ExceptionHandlerInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/cache/app/impl/RedisCacheUserFeedbackServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/cache/app/impl/RedisCacheUserFeedbackServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/cache/lock/impl/LockServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/cache/lock/impl/LockServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/cache/user/impl/RedisCacheLoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/cache/user/impl/RedisCacheLoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/bean/BusinessException.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/bean/BusinessException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/bean/ResultCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/bean/ResultCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/enums/SexEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/enums/SexEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/enums/StatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/enums/StatusEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/login/config/JwtAuthConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/common/login/config/JwtAuthConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/dream/tea/provider/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/constants/RedisKeyPrefixConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/common/constants/RedisKeyPrefixConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/mapper/user/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/mapper/user/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/service/user/UserLoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/service/user/UserLoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/service/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/service/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/service/user/impl/UserLoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/dream/tea/service/service/user/impl/UserLoginServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +51,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -158,17 +156,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UserUserLoginServiceTest.registerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="provider" />
       <extension name="coverage">
@@ -231,6 +218,7 @@
       <workItem from="1612316840897" duration="234000" />
       <workItem from="1612317508116" duration="1091000" />
       <workItem from="1612745297421" duration="3207000" />
+      <workItem from="1613648251576" duration="2348000" />
     </task>
     <task id="LOCAL-00001" summary="项目结构搭建成功">
       <created>1609595600556</created>
@@ -348,10 +336,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="434" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610899841612" />
-    <state width="197" height="384" key="Git.Branch.Popup" timestamp="1612748061212">
+    <state width="199" height="386" key="Git.Branch.Popup" timestamp="1613648381290">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="197" height="384" key="Git.Branch.Popup/0.0.1366.728@0.0.1366.728" timestamp="1612748061212" />
+    <state width="199" height="386" key="Git.Branch.Popup/0.0.1366.728@0.0.1366.728" timestamp="1613648381290" />
     <state width="1323" height="140" key="GridCell.Tab.0.bottom" timestamp="1612104600895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -404,10 +392,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="220" height="477" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1610850843690" />
-    <state x="263" y="98" key="IDE.errors.dialog" timestamp="1612100346519">
+    <state x="263" y="98" key="IDE.errors.dialog" timestamp="1613649973528">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="263" y="98" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1612100346519" />
+    <state x="263" y="98" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1613649973528" />
     <state x="492" y="65" key="RollbackChangesDialog" timestamp="1609566853526">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -424,18 +412,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="477" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1609949139451" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1612096043526">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1613648343180">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612096043526" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1613648343180" />
     <state x="427" y="0" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610850801652">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="427" y="0" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1610850801652" />
-    <state x="486" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612097017218">
+    <state x="486" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613648396525">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="486" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1612097017218" />
+    <state x="486" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1613648396525" />
     <state x="131" y="86" width="1104" height="642" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1610894504342">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -43,11 +43,12 @@ public class UserLoginServiceImpl implements UserLoginService {
     }
 
     @Override
-    public int register(User user) {
+    public void register(User user) {
         User exists = userService.getUserByAccount(user.getAccount());
         if (ObjectUtil.isNotNull(exists)) {
             throw new BusinessException(ResultCodeEnum.ACCOUNT_IS_EXISTS);
         }
-        return userMapper.insert(user);
+        // 并发问题直接抛异常就行
+        userMapper.insert(user);
     }
 }

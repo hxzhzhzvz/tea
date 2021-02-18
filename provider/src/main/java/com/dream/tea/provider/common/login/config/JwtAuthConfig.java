@@ -37,14 +37,4 @@ public class JwtAuthConfig {
      * token的header字段
      */
     private String authKey = "user-auth";
-
-    /**
-     * redis key
-     */
-    private String tokenRedisKeyPrefix = "token:";
-
-    /**
-     * redis value
-     */
-    private String tokenRedisValue = "login";
 }
