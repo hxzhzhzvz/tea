@@ -9,5 +9,6 @@ public class Demo {
         System.out.println(16>>2);
         System.out.println(15);
         System.out.println(15>>1);
+        System.out.println(Long.toHexString(10000));
     }
 }

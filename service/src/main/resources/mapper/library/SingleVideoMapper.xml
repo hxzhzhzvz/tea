@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dream.tea.service.mapper.library.SingleVideoMapper">
+  <resultMap id="BaseResultMap" type="com.dream.tea.service.model.library.SingleVideo">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="cover_url" jdbcType="VARCHAR" property="coverUrl" />
+    <result column="video_url" jdbcType="VARCHAR" property="videoUrl" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_update" jdbcType="TIMESTAMP" property="gmtUpdate" />
+  </resultMap>
+  <select id="getByMaxIdAndLimitSize" resultMap="BaseResultMap">
+    select id, name, cover_url, video_url, gmt_create, gmt_update
+    from single_video
+    <where>
+      <if test="maxId != null">
+        id &lt;= #{maxId, jdbcType=BIGINT}
+      </if>
+    </where>
+    order by id desc
+    limit #{limitSize, jdbcType=INTEGER}
+  </select>
+</mapper>

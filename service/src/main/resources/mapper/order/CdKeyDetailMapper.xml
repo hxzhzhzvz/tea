@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dream.tea.service.mapper.order.CdKeyDetailMapper">
+  <resultMap id="BaseResultMap" type="com.dream.tea.service.model.order.CdKeyDetail">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="cd_key_id" jdbcType="BIGINT" property="cdKeyId" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="exchange_status" jdbcType="TINYINT" property="exchangeStatus" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_update" jdbcType="TIMESTAMP" property="gmtUpdate" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cd_key_detail
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="batchInsert" parameterType="com.dream.tea.service.model.order.CdKeyDetail">
+    insert into cd_key_detail (cd_key_id, code, exchange_status, status)
+    values
+    <foreach collection="cdKeyDetailList" separator="," item="data">
+      (#{data.cdKeyId,jdbcType=BIGINT}, #{data.code,jdbcType=VARCHAR},
+      #{data.exchangeStatus,jdbcType=TINYINT}, #{data.status,jdbcType=TINYINT})
+    </foreach>
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.dream.tea.service.model.order.CdKeyDetail">
+    update cd_key_detail
+    set cd_key_id = #{cdKeyId,jdbcType=BIGINT},
+      code = #{code,jdbcType=VARCHAR},
+      exchange_status = #{exchangeStatus,jdbcType=TINYINT},
+      status = #{status,jdbcType=TINYINT},
+      gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      gmt_update = #{gmtUpdate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, cd_key_id, code, exchange_status, status, gmt_create, gmt_update
+    from cd_key_detail
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, cd_key_id, code, exchange_status, status, gmt_create, gmt_update
+    from cd_key_detail
+  </select>
+</mapper>

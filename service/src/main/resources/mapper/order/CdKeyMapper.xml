@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dream.tea.service.mapper.order.CdKeyMapper">
+  <resultMap id="BaseResultMap" type="com.dream.tea.service.model.order.CdKey">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="biz_type" jdbcType="INTEGER" property="bizType" />
+    <result column="expire_time" jdbcType="TIMESTAMP" property="expireTime" />
+    <result column="quantity" jdbcType="INTEGER" property="quantity" />
+    <result column="extend_obj" jdbcType="VARCHAR" property="extendObj" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_update" jdbcType="TIMESTAMP" property="gmtUpdate" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cd_key
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.dream.tea.service.model.order.CdKey" useGeneratedKeys="true" keyProperty="id">
+    insert into cd_key (biz_type, expire_time, quantity, extend_obj, status)
+    values (#{bizType,jdbcType=INTEGER}, #{expireTime,jdbcType=TIMESTAMP}, #{quantity,jdbcType=INTEGER}, 
+      #{extendObj,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.dream.tea.service.model.order.CdKey">
+    update cd_key
+    set biz_type = #{bizType,jdbcType=INTEGER},
+      expire_time = #{expireTime,jdbcType=TIMESTAMP},
+      quantity = #{quantity,jdbcType=INTEGER},
+      source_uri = #{sourceUri,jdbcType=VARCHAR},
+      random_num = #{randomNum,jdbcType=INTEGER},
+      extend_obj = #{extendObj,jdbcType=VARCHAR},
+      status = #{status,jdbcType=TINYINT},
+      gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      gmt_update = #{gmtUpdate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, biz_type, expire_time, quantity, source_uri, random_num, extend_obj, status, 
+    gmt_create, gmt_update
+    from cd_key
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, biz_type, expire_time, quantity, source_uri, random_num, extend_obj, status, 
+    gmt_create, gmt_update
+    from cd_key
+  </select>
+</mapper>

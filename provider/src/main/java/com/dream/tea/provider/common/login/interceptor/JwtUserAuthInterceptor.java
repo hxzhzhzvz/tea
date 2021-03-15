@@ -10,6 +10,7 @@ import com.dream.tea.provider.common.login.entity.JwtPayload;
 import com.dream.tea.provider.common.login.utils.ResponseHelper;
 import com.dream.tea.provider.common.login.utils.SecretUtils;
 import com.dream.tea.service.common.bean.ResultCodeEnum;
+import com.dream.tea.service.common.constants.RedisKeyPrefixConstants;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.core.Ordered;
@@ -48,7 +49,7 @@ public class JwtUserAuthInterceptor implements HandlerInterceptor, Ordered {
         }
         String authKey = request.getHeader(jwtAuthConfig.getAuthKey());
         if (StringUtils.isNotBlank(authKey)) {
-            String jsonContentValue = stringRedisTemplate.opsForValue().get(jwtAuthConfig.getTokenRedisKeyPrefix() + authKey);
+            String jsonContentValue = stringRedisTemplate.opsForValue().get(RedisKeyPrefixConstants.TOKEN_REDIS_KEY_PREFIX + authKey);
             if (StringUtils.isBlank(jsonContentValue)) {
                 ResultCodeEnum resultCodeEnum = NOT_LOGIN_YET;
                 RespResult<Void> respResult = RespResult.failed(resultCodeEnum.getCode(), resultCodeEnum.getMsg());
